@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-       Copyright 2010-2018 the original author or authors.
+       Copyright 2010-2019 the original author or authors.
 
        Licensed under the Apache License, Version 2.0 (the "License");
        you may not use this file except in compliance with the License.
@@ -156,6 +156,36 @@
       <version>2.31.0</version>
       <scope>test</scope>
     </dependency>
+	<dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>htmlunit-driver</artifactId>
+      <version>2.31.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+      <scope>test</scope>
+    </dependency>
+        <dependency>
+        <groupId>info.cukes</groupId>
+        <artifactId>cucumber-java8</artifactId>
+        <version>${cucumber.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>info.cukes</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <version>${cucumber.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-server</artifactId>
+        <version>${selenium.version}</version>
+        <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -221,6 +251,10 @@
     <spring.version>5.0.7.RELEASE</spring.version>
     <assertj.version>3.9.1</assertj.version>
     <hsqldb.version>2.4.0</hsqldb.version>
+	
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <cucumber.version>1.2.4</cucumber.version>
+    <selenium.version>2.48.2</selenium.version>
   </properties>
 
   <profiles>

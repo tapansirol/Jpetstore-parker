@@ -1,5 +1,5 @@
 /**
- *    Copyright 2010-2018 the original author or authors.
+ *    Copyright 2010-2019 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -32,25 +32,25 @@ import org.mybatis.jpetstore.mapper.AccountMapper;
  */
 @RunWith(MockitoJUnitRunner.class)
 public class AccountServiceTest {
-  
-    @Mock
-    private AccountMapper accountMapper;
-  
-    @InjectMocks
-    private AccountService accountService;
-  
-    @Test
-    public void shouldCallTheMapperToInsertAnAccount() {
-      //given
-      Account account = new Account();
-  
-      //when
-      accountService.insertAccount(account);
-  
-      //then
-      verify(accountMapper).insertAccount(eq(account));
-      verify(accountMapper).insertProfile(eq(account));
-      verify(accountMapper).insertSignon(eq(account));
-    }
+
+  @Mock
+  private AccountMapper accountMapper;
+
+  @InjectMocks
+  private AccountService accountService;
+
+  @Test
+  public void shouldCallTheMapperToInsertAnAccount() {
+    //given
+    Account account = new Account();
+
+    //when
+    accountService.insertAccount(account);
+
+    //then
+    verify(accountMapper).insertAccount(eq(account));
+    verify(accountMapper).insertProfile(eq(account));
+    verify(accountMapper).insertSignon(eq(account));
+  }
 
 }

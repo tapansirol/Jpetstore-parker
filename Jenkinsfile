@@ -22,6 +22,12 @@ node {
 	     
     }
   }
+  
+  stage ('Cucmber'){
+  withMaven(jdk: 'JDK_local', maven: 'MVN_Local') {
+      sh 'mvn test -Dtest=Runner'	     
+    }
+  }
 	stage('SonarQube Analysis'){
 		def mvnHome = tool name : 'MVN_Local', type:'maven'
 		withSonarQubeEnv('sonar-server'){
@@ -29,6 +35,8 @@ node {
 			sh  "${mvnHome}/bin/mvn sonar:sonar"
 		}
 	}
+	
+	
 stage ("Appscan"){
 	 
 	//sleep 40
