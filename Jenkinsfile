@@ -46,16 +46,7 @@ node {
   }           
 
   }
-	stage ('Cucumber Reports') {
 
-            steps {
-                cucumber buildStatus: "UNSTABLE",
-                    fileIncludePattern: "**/cucumber.json",
-                    jsonReportDirectory: 'target'
-
-            }
-
-        }
 	stage('SonarQube Analysis'){
 		def mvnHome = tool name : 'MVN_Local', type:'maven'
 		withSonarQubeEnv('sonar-server'){
