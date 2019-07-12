@@ -23,7 +23,7 @@ node {
     }
   }
   
-  stage ('JunitUCV'){
+  stage ('Cucumber'){
   withMaven(jdk: 'JDK_local', maven: 'MVN_Local') {
       sh 'mvn test'	     
 	  echo("************************** Test Result Upload Started to Velocity****************************")
