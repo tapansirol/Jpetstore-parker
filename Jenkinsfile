@@ -44,6 +44,10 @@ node {
                        
             echo("************************** Test Result Uploaded Successful to Velocity****************************")
     }
+	  	sh 'cucumber buildStatus: "UNSTABLE",
+		fileIncludePattern: "**/cucumber.json",
+		jsonReportDirectory: "target" '
+
   }
 	stage('SonarQube Analysis'){
 		def mvnHome = tool name : 'MVN_Local', type:'maven'
