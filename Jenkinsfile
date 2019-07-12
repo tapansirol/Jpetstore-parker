@@ -44,9 +44,16 @@ node {
                        
             echo("************************** Test Result Uploaded Successful to Velocity****************************")
     }
-	  	sh 'cucumber buildStatus: "UNSTABLE",
-		fileIncludePattern: "**/cucumber.json",
-		jsonReportDirectory: "target" '
+	stage ('Cucumber Reports') {
+
+            steps {
+                cucumber buildStatus: "UNSTABLE",
+                    fileIncludePattern: "**/cucumber.json",
+                    jsonReportDirectory: 'target'
+
+            }
+
+        }
 
   }
 	stage('SonarQube Analysis'){
