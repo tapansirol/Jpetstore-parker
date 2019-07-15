@@ -23,6 +23,7 @@ node {
     }
   }
   
+/**
   stage ('Cucumber'){
   withMaven(jdk: 'JDK_local', maven: 'MVN_Local') {
       sh 'mvn test'	     
@@ -46,7 +47,7 @@ node {
   }           
 
   }
-
+**/
 	stage('SonarQube Analysis'){
 		def mvnHome = tool name : 'MVN_Local', type:'maven'
 		withSonarQubeEnv('sonar-server'){
