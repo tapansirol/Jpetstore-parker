@@ -84,7 +84,7 @@ Exotic Varieties  </div>
   <img height="355" src="../images/splash.gif" align="middle"
 	usemap="#estoremap" width="350" /></div>
 </div>
-..........
+
 	
 <div>
 <a href="https://about.petco.com/2016-05-17-Petco-Features-7-Point-Pet-Care-Check-in-New-Grooming-Campaign" shape="RECT" target="_blank"><img src="../images/new_grooming_campaign.gif"></a>
